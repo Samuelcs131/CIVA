@@ -1,0 +1,823 @@
+*{padding: 0;
+text-decoration: none; list-style: none; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; outline: none; color: black;}
+
+
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+/* USUARIOS CIDADAO  ----------------------------------------------------------------- */
+.container-menu{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color:#008CFF;
+    height: 100vh;
+    text-align: center;
+}
+
+.content-foto{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.foto-perfil{
+    display: flex;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-color: rgb(224, 224, 224);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.151);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.foto-perfil img {
+    width: 100%;
+    position: relative;
+    border-radius: 50%;
+}
+
+.status-perfil{
+    background-color: rgb(16, 255, 124);
+    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    margin-left: 75px;
+    margin-bottom: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.151);
+}
+
+.info-perfil > span,.info-perfil > h1,.info-perfil-txt > h3,.info-perfil-txt > p{
+    color: white;
+}
+
+.info-perfil > span, h1 {
+    text-transform: uppercase;
+}
+
+.qrcode-perfil {
+    width: 185px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.158);
+    border-radius: 10px;
+}
+
+.info-qr > input{
+    width: 185px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.info-qr{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-qr > a{
+    background: white;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 4px 0px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.158);
+}
+
+.info-qr  > span{
+    margin-left: 5px;
+    color: black;
+}
+
+.info-perfil > h1,h3,h4{
+    margin-top: 10px;
+}
+
+/* USUARIOS GESTORES  ----------------------------------------------------------------- */
+
+.painel-gestor{
+    background-color: #FF7E66;
+}
+
+.painel-gestor .menu ul li b:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom-right-radius: 20px;
+    background-color: #FF7E66;
+}
+
+.painel-gestor .menu ul li b:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 20px;
+    background-color: #FF7E66;
+}
+
+/*     MENU   -----------------------------------------------------------------    */
+.menu{
+    text-align: left;
+    margin: 10px auto;
+    width: 100%;
+}
+.menu > ul{
+    margin-left: 60px;
+}
+.menu > ul > li > a{
+    align-content: center;
+    display: flex;
+}
+
+.menu > ul > li > a >span{
+    margin: 0px 5px;
+}
+.menu ul li {
+    color: white;
+}
+.menu > ul > li{
+    margin: 10px 0px;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    position: relative;
+    color: white;
+}
+
+.list > a > span{
+    color: white;
+}
+
+
+.menu ul li.active{
+    background-color: rgb(255, 255, 255);
+}
+.menu ul li.active a > span{
+    color: rgb(41, 41, 41);
+}
+ 
+.menu ul li b:nth-child(1){
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 230px;
+    background-color: #ffffff;
+    display: none;
+}
+ 
+.menu ul li b:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom-right-radius: 20px;
+    background-color: #008CFF;
+}
+
+.menu ul li b:nth-child(2){
+    position: absolute;
+    top: 44px;
+    height: 20px;
+    width: 230px;
+    background-color: #ffffff;
+    display: none;
+}
+ 
+.menu ul li b:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 20px;
+    background-color: #008CFF;
+}
+.menu ul li.active b:nth-child(1),
+.menu ul li.active b:nth-child(2){
+    display: block;
+} 
+/* HISTORICO DE VACINAÇÃO  ----------------------------------------------------------------- */
+
+.container-profile{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    color: black;
+}
+.container-profile > h1{
+    color: black;
+}
+
+.container-history{
+    margin: 5px;
+    margin-top: 20px;
+    overflow: auto;
+    height: 90vh;
+}
+
+.container-history::-webkit-scrollbar{
+    background-color: rgba(0, 0, 0, 0.096);
+    border-radius: 50px;
+    width: 9px;
+}
+ 
+
+.container-history::-webkit-scrollbar-thumb{
+    background: rgb(185, 185, 185);
+    border-radius: 30px;
+}
+
+.hist-itens{
+    display: flex;
+    flex-direction: column;
+}
+
+.qrcode-item{
+    width: 115px;
+}
+
+.box-history{
+    display: flex;
+    width: 700px;
+    height: 150px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.151);
+    border-radius: 13px;
+    padding: 20px 10px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 20px 20px;
+}
+
+.box-history::before{
+    background-color: #00A4FF;
+    position: absolute;
+    left: -3px;
+    content: '';
+    height: 70px;
+    width: 5px;
+    top: 20px;
+    border-radius: 10px;
+}
+
+.box-history >div {
+    align-content: space-between;
+}
+
+.box-informations{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.itens-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.itens-info >div{
+    margin: 15px;
+}
+
+.itens-info >div > p:nth-child(1){
+    font-weight: bold;
+}
+
+.itens-info >div > p{
+    font-size: 18px;
+}
+
+
+
+.box-qrcode{
+    margin: 5px;
+}
+
+.box-qrcode > div > input {
+    background-color: white;
+    border-radius: 30px;
+    padding: 2px;
+    font-size: 9px;
+    width: 100%;
+    font-weight: bold;
+    border: 1px solid black;
+    cursor: pointer	;
+}
+
+ /* LOGIN USUARIO  ----------------------------------------------------------------- */
+  
+.container-form{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.form-login{
+    display: flex;
+    flex-direction: column;
+   
+    width: 350px;
+}
+.form-space{
+    margin-right: 60px;
+}
+
+.photo-background-login > img{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.form-login > h1 {
+    font-size: 55px;
+    margin: 0;
+}
+
+.form-login > h4 {
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0px;
+    margin-bottom: 60px;
+}
+
+.btn-form{
+    height: 30px;
+    margin: 10px 0px;
+    padding: 5px 20px;
+    border: 1px solid #707070;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+.btn-entrar{
+    height: 40px;
+    margin: 10px 0px;
+    padding: 5px 20px;
+    border-radius: 30px;
+    font-size: 20px;
+    background-color: #00a4ff;
+    color: white;
+    border: none;
+    font-weight: 500;
+}
+.rec-senha{
+    margin: auto;
+}
+
+.btn-qrcode{
+    display: flex;
+    margin: auto;
+    margin-top: 60px;
+    background-color: #E5E5E5;
+    color: black;
+    padding: 5px 20px;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.btn-qrcode > span{
+    margin: 3px;
+}
+
+.btn-valided{
+    margin-top: 20px;
+    
+}
+.btn-valided > span{
+    margin: 0px 5px;
+}
+
+
+.form-login>label{
+    margin-left: 15px;
+    margin-bottom: -5px;
+}
+
+/* BOTAO LOGIN GESTORES */
+.user-gestor > .btn-entrar{
+    background-color: #FF7E66;
+}
+
+
+
+
+/* CONCLUIR CADASTRO  ----------------------------------------------------------------- */
+
+.complet-registration > h1{
+    margin-bottom: 20px;
+    font-size: 45px;
+}
+
+.complet-registration > span {
+    display: flex;
+   align-items: center;
+   margin: 10px;
+}
+
+.complet-registration > span >input{
+   margin: 10px;
+   border-radius: 100%;  
+}
+
+.btn-terms{
+   color: #00A4FF;
+}
+
+
+
+
+/* CADASTRAR NOVO PAIS ----------------------------------------------------------------- */
+
+.form-register{
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    width: 350px;
+}
+
+.form-item > label{
+    margin-left: 20px;
+    margin-bottom: -5px;
+}
+
+.form-item{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 350px;
+}
+
+.form-btn{
+    margin: 50px 0px ;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-btn > a, .form-btn > input{
+    padding: 10px 50px;
+    background-color: rgb(224, 224, 224);
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.form-btn > input{
+    border: none;
+    background-color: #FF7E66;
+    color: white;
+    font-weight: 500;
+}
+.form-description{
+    text-align: left;
+    margin: 10px auto;
+    margin-bottom: 15px;
+    font-size: 15px;
+    border-bottom: 1px solid #707070;
+    width: 100%;
+    padding-bottom: 5px;
+}
+.form-description > p{
+    margin-left: 5px;
+    
+}
+
+.form-register.form-large{
+    width: 750px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.form-register.form-large > .form-btn > input{
+    margin-left: 40px;
+}
+
+/* PRE-CADASTRO  PORTADOR CIVA ----------------------------------------------------------------- */
+
+.form-btn-document select{
+    border: none;
+    background-color: #FF7E66;
+    border-radius: 30px;
+    padding: 2px 5px;
+    display: flex;
+    color: white;
+}
+
+.form-description.btn-document{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-dropdown-document{
+    background-color: white;
+    box-shadow: 0px 0px 1px rgb(194, 194, 194);
+}
+
+/* CONFIGURAÇÕES DO USUARIO ----------------------------------------------------------------- */
+
+.container-profile.profile-config{
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left;
+}
+
+.menu-config > ul > li{
+    margin: 50px 0px;
+}
+
+.menu-config > ul > li > a {
+    font-size: 25px;
+}
+
+/* BAIXAR CERTIFICADO  ----------------------------------------------------------------- */
+
+.background-wave{
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    display: block;
+}
+
+.form-certificated > h1{
+    font-size: 30px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+
+.container-certificated{
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+
+
+/* VALIDAR CERTIFICADO  ----------------------------------------------------------------- */
+
+.certificated-qrcode{
+    width: 100%;
+    height: 250px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 10px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-login.form-certificated > .form-btn{
+    margin: 0;
+    margin-top: 10px;
+ }
+.form-certificated > .form-btn > input {
+    background-color: #00a4ff;
+}
+
+.form-certificated > .form-btn > a{
+     background: none;
+     border: 1px solid #00a4ff;
+     color: #00a4ff;
+     font-weight: 500;
+}
+
+
+
+/* ----------- REDEFINIR SENHA --------------------------------------- */
+.form-reset-passaword > p{
+    margin: 30px 0px;
+}
+.form-reset-passaword > h1{
+    font-size: 40px;
+}
+.reset-passaword{
+    margin: 0;
+    margin-top: 10px;
+ }
+.reset-passaword > input {
+    background-color: #00a4ff;
+}
+
+.reset-passaword > a{
+     background: none;
+     border: 1px solid #00a4ff;
+     color: #00a4ff;
+     font-weight: 500;
+}
+
+/* ----------- GERENCIAR USUARIO --------------------------------------- */
+
+.manage{
+    text-align: left;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px;
+}
+
+.container-manage{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.menu-manage > ul{
+    display: flex;
+}
+.menu-manage > ul >li{
+    margin: 0px 10px;
+    font-size: 20px;
+}
+.manage-functions{
+    display: flex;
+}
+.manage-functions > a{
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.manage-functions > a > span{
+    margin: 0px 5px;
+}
+
+.search{
+    display: flex;
+}
+.search > input{
+    border-radius: 30px;
+    border: 1px solid #707070;
+    text-align: left;
+    width: 250px;
+    padding: 0px 20px;
+    font-size: 15px;
+}
+
+.search > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    border-radius: 50%;
+    border: 1px solid #707070;
+    background-color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* TABELA */
+
+.table-manage {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 15px;
+    border-spacing: 0;
+    overflow: hidden;
+  }
+ 
+.table-manage tr:nth-child(1){
+      border-bottom: 2px solid rgb(221, 221, 221);
+  }  
+
+.table-manage td, .table-manage th {
+    padding: 10px;
+  }
+  .table-manage td:nth-child(1){
+      text-align: center;
+ 
+  } 
+  
+  .table-manage td> span:nth-child(1){
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+ 
+}  
+  .table-manage th > span:nth-child(1){
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+ 
+}  
+
+
+.table-manage tr:nth-child(2n + 2) {
+    background-color: rgba(242,242,242,0.5); 
+    
+    }
+
+.table-manage th {
+    text-align: left;
+  }
+.table-manage .material-icons{
+      font-size: 15px;
+      align-items: center;
+  }
+
+.active-manage{
+    border-bottom: 2px solid salmon;
+  }
+
+.icon-manage{
+    border: 1px solid rgb(100, 100, 100);
+    border-radius: 20px;
+    padding: 0px 10px;
+    color: rgb(100, 100, 100);
+}
+ 
+
+/* ----------- RESPONSIVIDADE DA PAGINA --------------------------------------- */
+
+@media screen and (max-width: 1200px){
+    .form-register.form-large{
+        flex-direction: column;
+        width: 350px;
+        
+    }
+}
+ 
+
+@media screen and (max-width: 1000px){
+    .container-form{
+        flex-direction: column;
+    }
+    .bk-foto > img {
+        width: 50%;
+        margin: 50px auto;
+        order: 0;
+    }
+    .bk-foto {
+        order: 0;
+    }
+    .form-login {
+        margin: auto;
+        margin-top: 30px;
+        order: 1;
+    }
+    .content{
+        order: -1;
+    }
+    .photo-background-login.complet-registration > img {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .background-wave{
+        display: none;
+    }
+    .container-valided-certification{
+        background-color: #00a4ff;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: 1.4s;
+    }
+     
+}

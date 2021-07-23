@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+<link rel="stylesheet" href="style/style-global.css">
+<link rel="shortcut icon" type="image" href="img/favicon-civa.svg"/>
+<title>CIVA</title>
+</head>
+<body>
+
+<nav class="container-menu painel-gestor">
+  <div class="info-perfil">
+  
+  <div class="container-foto">
+  <div class="foto-perfil">
+    <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHjQtsY5wu5NA/profile-displayphoto-shrink_800_800/0/1615986476491?e=1631750400&v=beta&t=c0Ez9tt8HcjJEzqbVoudBWaSD7_AIy7ZLCCPqhzIWeU" alt="">
+  </div>
+  
+</div>
+
+  <div class="info-perfil">
+  <h1>Samuel Claudino</h1>
+  <span class="info-perfil-txt">
+  <p>Gestor</p>
+  </span>
+</div>
+</div>
+
+<!---------------- MENU ---------------------------->
+
+<div class="menu">
+  <ul>
+    <li class="list active">
+      <b></b>
+      <b></b>
+      <a href="#">
+        <span class="material-icons">group</span>
+        <span class="title">Gerenciar Usuário</span>
+      </a>
+    </li>
+    <li class="list">
+    <b></b>
+    <b></b>
+    <a href="#">
+      <span class="material-icons">place</span>
+      <span class="title">Gerenciar Ponto</span>
+    </a>
+  </li>
+  <li class="list">
+    <b></b>
+    <b></b>
+    <a href="#">
+      <span class="material-icons">note_add</span>
+      <span class="title">Gerenciar Vacinação</span>
+    </a>
+  </li>
+  <li class="list">
+    <b></b>
+    <b></b>
+    <a href="#">
+      <span class="material-icons">assessment</span>
+      <span class="title">Painel Relatório</span>
+    </a>
+  </li>
+  <li class="list">
+    <b></b>
+    <b></b>
+    <a href="#">
+      <span class="material-icons">vaccines</span>
+      <span class="title">Gerenciar Vacina</span>
+    </a>
+  </li>
+  <li class="list">
+    <b></b>
+    <b></b>
+    <a href="#">
+      <span class="material-icons">account_circle</span>
+      <span class="title">Perfil</span>
+    </a>
+  </li>
+</ul>
+</div>
+</nav>
+
+
+
+
+<!---------------- CONTEUDO PRINCIPAL -------------->
+
+
+<main class="container-profile">
+
+<h1>Pré-cadastrar novo Portador CIVA</h1>
+
+
+
+<form class="form-register">
+
+    <span class="form-description btn-document">
+    <p>Dados Portador CIVA</p>
+    <span class="form-btn-document">
+        <select>
+            <option value="" class="btn-dropdown-document">Documento Nacional</option>
+            <option value="" class="btn-dropdown-document">Passaporte</option>
+        </select>
+    </span>
+    </span>
+
+    <div class="form-item">
+    <label for="">Nome</label>
+    <input type="text" placeholder="Nome Completo" class="btn-form">
+</div>
+
+<div class="form-item">
+    <label for="">País de origem</label>
+    <input type="text" placeholder="Ex: Brasil" class="btn-form">
+</div>
+
+<div class="form-item">
+    <label for="">Identidade</label>
+    <input type="text" placeholder="120.393.592-13" class="btn-form">
+</div>
+
+<div class="form-item">
+  <label for="">Data de nascimento</label>
+  <input type="date" placeholder="Ex: 01/01/2020" class="btn-form">
+</div>
+
+    <div class="form-btn">
+        <a href="">Voltar</a>
+        <input type="button" value="Cadastrar" >
+    </div>
+
+</form>
+
+</main>
+
+
+<script src="js/usuario-functions.js"></script>
+</body>
+</html>
