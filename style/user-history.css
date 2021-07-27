@@ -1,0 +1,61 @@
+@media screen and (max-width: 1100px){
+body{
+    overflow-y: initial;
+}
+
+.container-foto, .info-perfil, .info-qr{
+    display: none;
+}
+.container-profile{
+    top: 0;
+    position: absolute;
+   
+    display: flex;
+    padding: 0;
+    width: 95%;
+    margin: 50px 4%;
+}
+ 
+.container-history{
+    height: 100%;
+    margin-bottom: 50px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.box-history{
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    height: 100%;
+    box-shadow: 0px 0px 3px rgb(0 0 0 / 15%);
+    border-radius: 13px;
+    padding: 20px 10px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    margin: 10px 0px;
+}
+.box-informations{
+    flex-direction: column;
+    margin: auto;
+}
+.box-qrcode{
+    width: 90%;
+}
+.box-qrcode > div > input{
+    padding: 5px;
+    border: none;
+    background-color: #00A4FF;
+    font-size: 11px;
+    color: white;
+}
+
+.box-qrcode > img{
+    display: none;
+    
+}
+}
+ 

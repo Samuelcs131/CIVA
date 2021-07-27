@@ -1,0 +1,370 @@
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* -------------PROFILE USER------------- */
+
+.container-menu{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color:#008CFF;
+    height: 100vh;
+    text-align: center;
+}
+
+.content-foto{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.foto-perfil{
+    display: flex;
+    width: 60%;
+    border-radius: 50%;
+    border: 5px solid white;
+    background-color: rgb(224, 224, 224);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.151);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.foto-perfil img {
+    width: 100%;
+    position: relative;
+    border-radius: 50%;
+}
+
+.status-perfil{
+    background-color: rgb(16, 255, 124);
+    border: 2px solid white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    margin-left: 75px;
+    margin-bottom: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.151);
+}
+
+.info-perfil > h1,.info-perfil-txt > h3,.info-perfil-txt > p{
+    color: white;
+}
+
+.container-foto > span{
+    color: white;
+    text-transform: uppercase;
+}
+
+.info-perfil > span, h1 {
+    text-transform: uppercase;
+}
+
+.qrcode-perfil {
+    width: 185px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.158);
+    border-radius: 10px;
+}
+
+.info-qr > input{
+    width: 185px;
+    height: 30px;
+    border-radius: 50px;
+    border: none;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.info-qr{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-qr > a{
+    background: white;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 4px 0px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.158);
+}
+
+.info-qr  > span{
+    margin-left: 5px;
+    color: black;
+}
+
+.info-perfil > h1,h3,h4{
+    margin-top: 10px;
+}
+
+
+
+
+/* -------------PROFILE MANAGE------------- */
+
+.painel-gestor{
+    background-color: #FF7E66;
+}
+
+.painel-gestor .menu ul li b:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom-right-radius: 20px;
+    background-color: #FF7E66;
+}
+
+.painel-gestor .menu ul li b:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 20px;
+    background-color: #FF7E66;
+}
+
+
+/* -------------MENU PROFILE------------- */
+
+.list:nth-child(3){
+    display: none;
+}
+
+.menu{
+    text-align: left;
+    margin: 10px auto;
+    width: 100%;
+}
+.menu > ul{
+    margin-left: 60px;
+}
+.menu > ul > li > a{
+    align-content: center;
+    display: flex;
+}
+
+.menu > ul > li > a >span{
+    margin: 0px 5px;
+}
+.menu ul li {
+    color: white;
+}
+.menu > ul > li{
+    margin: 10px 0px;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    position: relative;
+    color: white;
+}
+
+.list > a > span{
+    color: white;
+}
+
+
+.menu ul li.active{
+    background-color: rgb(255, 255, 255);
+}
+.menu ul li.active a > span{
+    color: rgb(41, 41, 41);
+}
+ 
+.menu ul li b:nth-child(1){
+    position: absolute;
+    top: -20px;
+    height: 20px;
+    width: 230px;
+    background-color: #ffffff;
+    display: none;
+}
+ 
+.menu ul li b:nth-child(1)::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-bottom-right-radius: 20px;
+    background-color: #008CFF;
+}
+
+.menu ul li b:nth-child(2){
+    position: absolute;
+    top: 44px;
+    height: 20px;
+    width: 230px;
+    background-color: #ffffff;
+    display: none;
+}
+ 
+.menu ul li b:nth-child(2)::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-top-right-radius: 20px;
+    background-color: #008CFF;
+}
+.menu ul li.active b:nth-child(1),
+.menu ul li.active b:nth-child(2){
+    display: block;
+} 
+
+
+/* -------------MENU PROFILE------------- */
+
+
+@media screen and (max-width: 1280px){
+    .foto-perfil{
+        display: flex;
+        width: 120px;
+        height: 120px;
+        border: 3px solid white;
+    }
+    .status-perfil{
+        background-color: rgb(16, 255, 124);
+        border: 2px solid white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        margin-left: 50px;
+        margin-bottom: -13px;
+    }
+    .info-qr{
+        width: 150px;
+    }
+    .info-qr >img{
+        width: 100%;
+    }
+    .status-perfil{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+     .container-profile{
+        display: none;
+    }  
+    .container-menu{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+    .info-qr > a{
+        width: 110px;
+    }
+    .btn-qrcode{
+        font-size: 15px;  
+    }
+    .btn-qr {
+        font-size: 20px;
+    }
+    .list:nth-child(3){
+        display: block;
+    }
+    .menu{
+        align-items: flex-end;
+        display: flex;
+        margin-bottom: 0;
+        bottom: 0;
+        position: fixed;
+        overflow-x: auto;
+        width: 100%;
+    }
+    .menu > ul{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0px auto;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.123);
+        height: 55px;
+        
+    }
+    .menu > ul >li{
+        margin-bottom: 0;
+        margin-top: 0;
+        width: 70px;
+    }
+    .menu > ul >li >a{
+        font-size: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu > ul> li> a > span{
+        color: black;
+    }
+    .menu ul li.active b:nth-child(1), .menu ul li.active b:nth-child(2){
+        display: none;
+    }
+    .menu ul li:nth-child(3){
+        order: -2;
+    }
+    .menu ul li:nth-child(2){
+        order: -1;
+    }
+    .menu ul li.active{
+        background-color: inherit;
+    }
+    .menu ul li.active a > span{
+        color: #008CFF;
+    }
+    .info-perfil > span,.info-perfil > h1,.info-perfil-txt > h3,.info-perfil-txt > p{
+        color: black;
+    }
+    .container-foto{
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        background-color: inherit;
+        background: url("../img/background-usuario-mobile.svg");
+        background-size: cover;
+        background-position-y: bottom;
+    }
+
+    .menu{
+        z-index: 3;
+    }
+    .info-qr{
+  
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 400px;
+        padding-bottom: 70px;
+    }
+    .info-qr > img {
+        width: 200px;
+    }
+   
+    body{
+        overflow-y: initial;
+    }
+}
+
+
+
+
+ 

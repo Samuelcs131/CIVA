@@ -1,0 +1,27 @@
+@media screen and (max-width: 1100px){
+    .container-foto, .info-perfil, .info-qr{
+        display: none;
+    }
+    .container-menu{
+        height: 0;
+    }
+    .container-profile.profile-config{
+        padding: 0;
+        margin: 50px 10%;
+    }
+    .profile-config{
+      display: flex;
+    }
+    .menu{
+        z-index: 3;
+    }
+    body{
+        overflow-y: inherit;
+    }
+}
+
+
+
+ 
+
+ 
