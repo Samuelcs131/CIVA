@@ -233,7 +233,7 @@ body {
 /* -------------MENU PROFILE------------- */
 
 
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1600px){
     .foto-perfil{
         display: flex;
         width: 120px;
